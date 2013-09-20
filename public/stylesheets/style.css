@@ -1,0 +1,137 @@
+body{
+	padding-top: 45px;
+}
+.fixed-top{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99;
+}
+nav{
+	background-color: #000066;
+	height: 45px;
+}
+
+.nav-title{
+	color: #ffffff;
+	float: left;
+	height: 45px;
+	width: auto;
+
+	position: relative;
+	left: 10px;
+	right: 10px;
+	/*margin: 0;*/
+}
+.nav-title h1{
+	height:45px;
+}
+.nav-title a{
+	display: block;
+	line-height: 45px;
+	color: #ffffff;
+	position: relative;
+	padding: 0px 10px;
+	height: 45px;
+	text-decoration: none;
+}
+
+.nav-menu li{
+	float: left;
+	list-style-type: none;
+}
+.nav-menu li a:hover{
+	background-color: #00ccff;
+}
+
+.nav-menu li a{
+	display: block;
+	padding: 0px 15px;
+	height: 45px;
+	line-height: 45px;
+	font-size: 16px;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+
+.pull-left{
+	float: left;
+}
+
+.pull-right{
+	float: right;
+}
+
+
+.nav-info{
+	height: 45px;
+	padding-right: 15px;
+}
+.nav-info p{
+	font-size: 16px;
+	color: #ffffff;
+	line-height: 45px;
+}
+.nav-info a{
+	color: #00ccff;
+	text-decoration: none;
+}
+.container{
+	width: 100%;
+}
+
+.pane{
+	background-color: rgba(51, 204, 255, 0.5);
+	border-radius: 10px;
+	padding: 10px 10px;
+	min-height: 300px;
+}
+.row{
+	width: 100%;
+	height: auto;
+}
+.span3 {
+	float: left;
+	width: 22.5%;
+	padding: 10px 5px;
+}
+.span6 {
+	float: left;
+	width: 45%;
+	padding: 10px 5px;
+}
+.span9 {
+	float: left;
+	width: 67.5%;
+	padding: 10px 5px;
+}
+.span12 {
+	float: left;
+	width: 90%;
+	padding: 10px 5px;	
+}
+
+h1 {
+	font-size: 32px;
+}
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+.hide {
+	position: absolute;
+	left: 120%;
+}
+.login_url:hover {
+	color: #ff0000;
+}
+.login_st {
+	color: #FFFFFF;
+	display: block;
+}

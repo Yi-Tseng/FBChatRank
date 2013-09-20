@@ -1,0 +1,62 @@
+
+<html ng-app='shb'>
+	<head>
+		<meta charset='utf-8' />
+		<title>FB Chat Count</title>
+		
+
+	</head>
+		
+
+	<body>
+		<%
+			for(var k in data){
+				var t = data[k];
+				var count = t.message_count;
+				var ru = t.recent_authors;
+				var vi = t.viewer_id;
+
+				if(ru[0] != vi){
+					ru = ru[0];
+				} else {
+					ru = ru[1];
+				}
+				%>
+				<img src='http://graph.facebook.com/<%= ru %>/picture'></img>
+				<p class='name' fbid='<%= ru %>'></p>
+				<p><%= "數量 : " + count %></p>
+				<hr />
+			<% }
+		%>
+	</body>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$.ajaxSetup({ cache: true });
+			$.getScript('//connect.facebook.net/en_UK/all.js', function(){
+					FB.init({
+						appId: '630955786916364',
+						channelUrl: 'takeshi.tw',
+					});
+
+					var list = $('.name');
+					for(var i=0; i<list.length; i++){
+						FB.api(list[i].getAttribute('fbid'),
+						function(res){
+							var eles = $('.name[fbid='+res.id+']');
+							for(var k =0; k < eles.length; k++){
+								eles[k].innerText = "姓名：" + res.name;
+							}
+							
+						});
+					}
+				});
+			}	
+		);
+	
+	
+	</script>
+	
+</html>
+
+
