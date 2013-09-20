@@ -42,7 +42,7 @@ exports.login = function(req, res){
 			graph.authorize({
 				"client_id":'564323293603907',
 				"redirect_uri":'http://takeshi.tw:3000/fblogin',
-				"client_secret":'259b0a3ccc566ab157e32293688bed25',
+				"client_secret":'安安，不能給你喔',
 				"code":req.query.code
 			}, function (err, facebookRes) {
 				if(facebookRes.access_token){
