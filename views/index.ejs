@@ -10,25 +10,26 @@
 
 	<body>
 		<%
+			var n = 1;
 			for(var k in data){
+				%><h1><%= "第 " + n++ + " 名"%></h1><%
 				var t = data[k];
 				var count = t.message_count;
 				var ru = t.recent_authors;
 				var vi = t.viewer_id;
 
-				for(var i =0; i < ru.length){
+				for(var i =0; i < ru.length; i++){
 
 					if(ru[i] == vi){
 						continue;
 					}
-				%>
-				<img src='http://graph.facebook.com/<%= ru[i] %>/picture'></img>
-				<p class='name' fbid='<%= ru[i] %>'></p>
-				<% } %>
+		%>
+			<img src='http://graph.facebook.com/<%= ru[i] %>/picture'></img>
+			<p class='name' fbid='<%= ru[i] %>'></p>
+		<% } %>
 				<p><%= "數量 : " + count %></p>
 				<hr />
-			<% }
-		%>
+		<% } %>
 	</body>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 	<script type="text/javascript">
