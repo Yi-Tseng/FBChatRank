@@ -1,6 +1,6 @@
 var crypto = require('crypto');
 var graph = require('fbgraph');
-var async = require('async');
+
 
 exports.index = function(req, res){
 	
