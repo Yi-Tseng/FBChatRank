@@ -22,18 +22,13 @@ exports.index = function(req, res){
 exports.login = function(req, res){
 	if(!req.query.state) {
 
-		// redirect to error page
-		res.render('error', {isLogin: false, error_message: '參數有誤。'});
-
+		res.redirect('http://takeshi.tw:3000');
 	} else if(!req.query.code) {
 
-		// redirect error page
-		res.render('error', {isLogin: false, error_message: '參數有誤。'});
-		
+		res.redirect('http://takeshi.tw:3000');
 	} else if(req.query.error) {
-		// access denied, redirect error page
-		res.render('error', {isLogin: false, error_message: req.query.error});
 
+		res.redirect('http://takeshi.tw:3000');
 	} else {
 
 		var state = req.query.state;
@@ -62,12 +57,12 @@ exports.login = function(req, res){
 
 					
 				} else {
-					res.render('error', {isLogin: false, error_message: '登入失敗'});
+					res.redirect('http://takeshi.tw:3000');
 				}
 				
 			});
 		} else {
-			res.render('error', {isLogin: false, error_message: '參數有誤。'});
+			res.redirect('http://takeshi.tw:3000');
 		}
 	}
 };
