@@ -1,5 +1,5 @@
 {
-	"name": "FB Chat Count",
+	"name": "FBChatRank",
 	"version": "0.5.1",
 	"private": true,
 	"dependencies": {
