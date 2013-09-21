@@ -21,9 +21,15 @@
 				} else {
 					ru = ru[1];
 				}
+				for(var i =0; i < ru.length){
+
+					if(ru[i] == vi){
+						continue;
+					}
 				%>
-				<img src='http://graph.facebook.com/<%= ru %>/picture'></img>
-				<p class='name' fbid='<%= ru %>'></p>
+				<img src='http://graph.facebook.com/<%= ru[i] %>/picture'></img>
+				<p class='name' fbid='<%= ru[i] %>'></p>
+				<% } %>
 				<p><%= "數量 : " + count %></p>
 				<hr />
 			<% }
